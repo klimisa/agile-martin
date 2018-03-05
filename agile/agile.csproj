@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,11 +47,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATM\DepositTransaction.cs" />
+    <Compile Include="ATM\IDepositUI.cs" />
+    <Compile Include="ATM\ITransaction.cs" />
+    <Compile Include="ATM\ITransferUI.cs" />
+    <Compile Include="ATM\IUI.cs" />
+    <Compile Include="ATM\IWithdrawalUI.cs" />
+    <Compile Include="ATM\TransferTransaction.cs" />
+    <Compile Include="ATM\ATMUI.cs" />
+    <Compile Include="ATM\WithdrawalTransaction.cs" />
+    <Compile Include="Bowling\Frame.cs" />
+    <Compile Include="Bowling\Game.cs" />
+    <Compile Include="Bowling\GameTest.cs" />
+    <Compile Include="Bowling\FrameTest.cs" />
+    <Compile Include="Bowling\Scorer.cs" />
+    <Compile Include="Bowling\ThrowTest.cs" />
+    <Compile Include="DoorTimer\DoorTimerAdapter.cs" />
+    <Compile Include="DoorTimer\IDoor.cs" />
+    <Compile Include="DoorTimer\ITimedDoor.cs" />
+    <Compile Include="DoorTimer\ITimerClient.cs" />
+    <Compile Include="DoorTimer\TimedDoorMulipleInheritance.cs" />
+    <Compile Include="DoorTimer\Timer.cs" />
+    <Compile Include="PrimeGenerator\PrimeGenerator.cs" />
+    <Compile Include="PrimeGenerator\PrimeGeneratorTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShapeEx\Shape.cs" />
+    <Compile Include="DoorTimer\TimedDoorWithAdapter.cs" />
+    <Compile Include="Tree\TreeMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
